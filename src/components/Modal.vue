@@ -23,7 +23,7 @@
 import { ref, onMounted, watch } from 'vue';
 import gsap from 'gsap';
 import MittInstance from "@/core/lib/MittInstance.js";
-import CloseCross from './closeCross.vue';
+import CloseCross from '@/components/closeCross.vue';
 
 const props = defineProps({
   data: Object

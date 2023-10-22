@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import Experience from "../Experience.js";
-import { ENV_DATA } from "@/data/environmentData.js";
+import { ENV_DATA } from "../../data/environmentData.js";
 import gsap from "gsap";
-import MittInstance  from "@/core/lib/MittInstance.js";
+import MittInstance  from "../../core/lib/MittInstance.js";
 
 export default class Environment {
   constructor() {

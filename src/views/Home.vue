@@ -19,9 +19,9 @@
 
 <script setup>
   import { onMounted, ref } from 'vue';
-  import Circle from '@/components/Circle.vue'
+  import Circle from '../components/Circle.vue'
   import gsap from 'gsap';
-  import CtaBtnVue from '@/components/CtaBtn.vue';
+  import CtaBtnVue from '../components/CtaBtn.vue';
 
   onMounted(() => {
     let introTimeline = gsap.timeline();

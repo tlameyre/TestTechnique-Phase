@@ -3,28 +3,28 @@ $font_title: 'Avenir';
 
 @font-face {
   font-family: 'Avenir';
-  src: url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.eot') format('embedded-opentype'),
-    url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.woff2') format('woff2'),
-    url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.woff') format('woff'),
-    url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.ttf') format('truetype');
+  src: url('/src/assets/fonts/AvenirNext/Demi_600/avenir-next-demi.eot') format('embedded-opentype'),
+    url('/src/assets/fonts/AvenirNext/Demi_600/avenir-next-demi.woff2') format('woff2'),
+    url('/src/assets/fonts/AvenirNext/Demi_600/avenir-next-demi.woff') format('woff'),
+    url('/src/assets/fonts/AvenirNext/Demi_600/avenir-next-demi.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Avenir';
-  src: url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.eot') format('embedded-opentype'),
-    url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.woff2') format('woff2'),
-    url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.woff') format('woff'),
-    url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.ttf') format('truetype');
+  src: url('/src/assets/fonts/AvenirNext/Medium_500/avenir-next-medium.eot') format('embedded-opentype'),
+    url('/src/assets/fonts/AvenirNext/Medium_500/avenir-next-medium.woff2') format('woff2'),
+    url('/src/assets/fonts/AvenirNext/Medium_500/avenir-next-medium.woff') format('woff'),
+    url('/src/assets/fonts/AvenirNext/Medium_500/avenir-next-medium.ttf') format('truetype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Avenir';
-  src: url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.eot') format('embedded-opentype'),
-    url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.woff2') format('woff2'),
-    url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.woff') format('woff'),
-    url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.ttf') format('truetype');
+  src: url('/src/assets/fonts/AvenirNext/Regular_400/avenir-next-regular.eot') format('embedded-opentype'),
+    url('/src/assets/fonts/AvenirNext/Regular_400/avenir-next-regular.woff2') format('woff2'),
+    url('/src/assets/fonts/AvenirNext/Regular_400/avenir-next-regular.woff') format('woff'),
+    url('/src/assets/fonts/AvenirNext/Regular_400/avenir-next-regular.ttf') format('truetype');
   font-weight: 400;
 }
 

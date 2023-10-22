@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-  import ArrowBtn from '@/components/ArrowBtn.vue'
+  import ArrowBtn from './ArrowBtn.vue'
 
   defineProps({
     text: String,

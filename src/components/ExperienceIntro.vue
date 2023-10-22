@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-  import CtaBtnVue from '@/components/CtaBtn.vue';
-  import DragSVG from '@/components/DragSVG.vue';
+  import CtaBtnVue from './CtaBtn.vue';
+  import DragSVG from './DragSVG.vue';
   import gsap from 'gsap';
 
   const handleClick = () => {

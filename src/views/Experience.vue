@@ -8,13 +8,11 @@
 </template>
 
 <script setup>
-import Experience from "@/Experience/Experience";
-import ExperienceIntro from "@/components/ExperienceIntro.vue";
-import gsap from 'gsap';
+import Experience from "../Experience/Experience";
 import Modal from "/src/components/Modal.vue";
-import { onMounted, onUpdated, ref } from 'vue';
-import MittInstance from "@/core/lib/MittInstance.js";
-import { ENV_DATA } from "@/data/environmentData.js";
+import { onMounted, ref } from 'vue';
+import MittInstance from "../core/lib/MittInstance.js";
+import { ENV_DATA } from "../data/environmentData.js";
 
 const modalData = ref(ENV_DATA[0].pins[0])
 const currentSceneIndex = ref(0)

@@ -13,7 +13,7 @@ export const ENV_DATA = [
         },
         modalInfos: {
           title: "La lavande",
-          image: "public/images/modalImages/lavande.webp",
+          image: "/images/modalImages/lavande.webp",
           subTitle: "Les propriétés de la Lavande",
           text: "Nous utilisons la lavande fine particulièrement pour ses propriétés apaisantes et son parfum délicat. Cet ingrédient est au cœur de notre gamme « Soin Corps », par exemple dans la composition de notre eau de Cologne et bain moussant. Faisant partie d’un complexe de différentes huiles essentielles, la lavande se trouve également dans certains de nos produits d’aromachologie.",
         },
@@ -28,7 +28,7 @@ export const ENV_DATA = [
         },
         modalInfos: {
           title: "Le bassin",
-          image: "public/images/modalImages/bassin.webp",
+          image: "/images/modalImages/bassin.webp",
           subTitle: "Il est rempli d'eau",
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies aliquam, nunc nisl ultricies nunc, vitae aliq uam nisl nisl eget ultricies aliquam, nunc nisl ultricies",
         },
@@ -49,7 +49,7 @@ export const ENV_DATA = [
         },
         modalInfos: {
           title: "Le puit",
-          image: "public/images/modalImages/lavande.webp",
+          image: "/images/modalImages/lavande.webp",
           subTitle: "Les propriétés de la Lavande",
           text: "Nous utilisons la lavande fine particulièrement pour ses propriétés apaisantes et son parfum délicat. Cet ingrédient est au cœur de notre gamme « Soin Corps », par exemple dans la composition de notre eau de Cologne et bain moussant. Faisant partie d’un complexe de différentes huiles essentielles, la lavande se trouve également dans certains de nos produits d’aromachologie.",
         },
@@ -70,7 +70,7 @@ export const ENV_DATA = [
         },
         modalInfos: {
           title: "Le champ",
-          image: "public/images/modalImages/lavande.webp",
+          image: "/images/modalImages/lavande.webp",
           subTitle: "Les propriétés de la Lavande",
           text: "Nous utilisons la lavande fine particulièrement pour ses propriétés apaisantes et son parfum délicat. Cet ingrédient est au cœur de notre gamme « Soin Corps », par exemple dans la composition de notre eau de Cologne et bain moussant. Faisant partie d’un complexe de différentes huiles essentielles, la lavande se trouve également dans certains de nos produits d’aromachologie.",
         },

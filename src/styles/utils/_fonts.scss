@@ -1,0 +1,114 @@
+$default_font: 'Avenir';
+$font_title: 'Avenir';
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.eot') format('embedded-opentype'),
+    url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.woff2') format('woff2'),
+    url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.woff') format('woff'),
+    url('src/assets/fonts/Avenir Next/Demi_600/avenir-next-demi.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.eot') format('embedded-opentype'),
+    url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.woff2') format('woff2'),
+    url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.woff') format('woff'),
+    url('src/assets/fonts/Avenir Next/Medium_500/avenir-next-medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.eot') format('embedded-opentype'),
+    url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.woff2') format('woff2'),
+    url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.woff') format('woff'),
+    url('src/assets/fonts/Avenir Next/Regular_400/avenir-next-regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+.uppercase{	text-transform: uppercase; }
+.italic{ font-style: italic; }
+
+
+/**
+*  FONT WEIGHT
+**/
+
+.fw-200{ font-weight: 200; }
+.fw-300{ font-weight: 300; }
+.fw-400{ font-weight: 400; }
+.fw-500{ font-weight: 500; }
+.fw-600{ font-weight: 600; }
+.fw-700{ font-weight: 700; }
+
+
+/**
+*  FONT SIZE
+**/
+
+.fs-110-70{
+  font-size: clamp(4.375rem, 3.4947rem + 3.7559vw, 6.875rem);
+  line-height: clamp(3.75rem, 2.8697rem + 3.7559vw, 6.25rem);
+}
+.fs-96-50{
+  font-size: clamp(3.125rem, 2.1127rem + 4.3192vw, 6rem);
+  line-height: clamp(4.375rem, 3.3847rem + 4.2254vw, 7.1875rem);
+}
+.fs-48-24{
+  font-size: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+  line-height: clamp(2.125rem, 1.5968rem + 2.2535vw, 3.625rem);
+}
+.fs-24-18{
+  font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  line-height: clamp(1.75rem, 1.618rem + 0.5634vw, 2.125rem);
+}
+.fs-16{
+  font-size: 16px;
+  line-height: 22px;
+}
+.fs-14{
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/**
+*	NIVEAU DE TYPO
+**/
+
+.title {
+	font-family: $font_title;
+	&--l{
+    @extend .fs-110-70;
+    @extend .fw-600;
+	}
+	&--m{
+    @extend .fs-96-50;
+    @extend .fw-600;
+	}
+	&--s{
+    @extend .fs-48-24;
+    @extend .fw-600;
+	}
+}
+.text{
+  font-family: $default_font;
+	&--l{
+    @extend .fs-24-18;
+    @extend .fw-500;
+	}
+	&--m{
+    @extend .fs-16;
+    @extend .fw-600;
+	}
+	&--s{
+    @extend .fs-14;
+		@extend .fw-500;
+	}
+}
+
+.font-btn {
+  @extend .fs-16;
+  @extend .fw-600;
+}

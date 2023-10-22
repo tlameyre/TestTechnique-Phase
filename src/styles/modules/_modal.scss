@@ -1,0 +1,71 @@
+.modal__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: $white;
+  color: $black;
+  padding: 120px 120px 0;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(255, 214, 87, 0.07) 0%, rgba(255, 214, 87, 0.07) 100%), url(<path-to-image>), lightgray -33px -19.426px / 103.434% 103.621% cover center;
+  background-size: cover;
+  background-position: center;
+  overflow-y: scroll;
+  @include transform(translate3d(0, 100%, 0));
+  z-index: 2;
+  .modal__container {
+    position: relative;
+    background: $white;
+    padding-bottom: 64px;
+    .modal__hero {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background-position: center;
+    }
+    .close-cross {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+    .modal__title-wrapper {
+      margin: 40px 0 80px;
+      width: 100%;
+      overflow: hidden;
+      .modal__title {
+        width: fit-content;
+        animation: marquee 5s linear infinite;
+        span {
+          text-wrap: nowrap;
+          margin: 0 25px;
+        }
+      }
+    }
+
+    .modal__content {
+      padding: 0 180px 0 80px;
+      position: relative;
+      width: 100%;
+
+      .modal__subtitle {
+        width: 25vw;
+        max-width: 350px;
+      }
+
+      .modal__text {
+        width: 35vw;
+        max-width: 530px;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}

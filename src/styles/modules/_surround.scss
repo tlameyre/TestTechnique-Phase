@@ -1,0 +1,9 @@
+.to-surround {
+  position: relative;
+  .svg-circle {
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    width: 120%;
+  }
+}

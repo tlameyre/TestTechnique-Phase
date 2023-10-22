@@ -1,0 +1,73 @@
+/**
+*     GRID CONTAINER
+**/
+
+
+.container--debug {
+  opacity: 0;
+  position: fixed;
+  @include full-height();
+  pointer-events: none;
+  z-index: 1000000;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: $gutter_large;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  .col {
+    background: rgba(0, 255, 150, 0.2);
+    text-align: center;
+    width: 100%;
+  }
+
+  @include large-min {
+    .col {
+      background: rgba(0, 150, 255, 0.2);
+    }
+  }
+
+  @include medium-max {
+    gap: $gutter_medium;
+
+    @for $i from 1 through 12 {
+      .col:nth-child(#{$i}) {
+
+        background: rgba(255, 150, 255, 0.2);
+
+        @if $i <=$col_medium {
+          display: block;
+        }
+
+        @else {
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  @include small-max {
+    gap: $gutter_small;
+
+    @for $i from 1 through 12 {
+      .col:nth-child(#{$i}) {
+
+        background: rgba(150, 150, 255, 0.2);
+
+        @if $i <=$col_small {
+          display: block;
+        }
+
+        @else {
+          display: none;
+        }
+      }
+    }
+  }
+}

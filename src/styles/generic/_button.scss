@@ -1,0 +1,76 @@
+.cta-btn {
+  text-transform: uppercase;
+  color: $yellow;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 17px 22px;
+  border: 2px solid $yellow;
+  position: relative;
+  @include transition(all 0.3s);
+  cursor: pointer;
+  z-index: 1;
+  svg path {
+    @include transition(all 0.3s);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: calc(100% + 2px);
+    bottom: -2px;
+    display: block;
+    // width: 0%;
+    // height: calc(100% + 4px);
+    background-color: $yellow;
+    @include transition(all 0.3s);
+    z-index: -1;
+  }
+  .arrow-btn {
+    margin-left: 12px;
+    fill: $yellow;
+  }
+  &:hover {
+    color: $black;
+    svg {
+      fill: $black;
+      * {
+        stroke: $black;
+      }
+    }
+    &::before {
+      right: calc(-2px);
+    }
+  }
+}
+
+.changeScene-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 105px;
+  border: 3px solid $yellow;
+  color: $black;
+  text-align: center;
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+  @include transform(translate3d(-50%, 0, 0));
+  @include transition(all 0.3s);
+  padding: 70px;
+  cursor: pointer;
+  &::before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - 24px*2);
+    height: calc(100% - 24px*2);
+    background-color: $yellow;
+    z-index: -1;
+    @include transform(translate3d(-50%, -50%, 0));
+  }
+  &:hover {
+    @include transform(translate3d(-50%, 0, 0) scale(1.1));
+  }
+}

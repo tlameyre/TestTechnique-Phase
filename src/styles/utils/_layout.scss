@@ -1,0 +1,92 @@
+@use "sass:math";
+
+$breakpoint_large: 1600px;
+$breakpoint_medium: 1200px;
+$breakpoint_small: 768px;
+
+$col_large: 10;
+$col_medium: 6;
+$col_small: 2;
+
+$gutter_large: 30px;
+$gutter_medium: 30px;
+$gutter_small: 30px;
+
+$margin_large: 60px;
+$margin_medium: 25px;
+$margin_small: 20px;
+
+$max_width: 1600px;
+
+
+
+/**
+*	BREAKPOINTS
+**/
+@mixin portrait { @media only screen and (orientation : portrait)	{ @content; } }
+@mixin landscape { @media only screen and (orientation : landscape) { @content; } }
+
+@mixin small-max {	@media only screen and (max-width : $breakpoint_small) { @content; } }
+@mixin medium-max { @media only screen and (max-width : $breakpoint_medium)	{ @content; } }
+@mixin large-max { @media only screen and (max-width : $breakpoint_large)	{ @content; } }
+
+@mixin small-min { @media only screen and (min-width : calc(#{$breakpoint_small} + 1px)) { @content; } }
+@mixin medium-min { @media only screen and (min-width : calc(#{$breakpoint_medium} + 1px)) { @content; } }
+@mixin large-min { @media only screen and (min-width : calc(#{$breakpoint_large} + 1px)) { @content; } }
+
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: auto;
+  left:0;
+  right:0;
+  padding-left: $margin_large;
+  padding-right: $margin_large;
+
+  @include medium-max {
+    padding-left: $margin_medium;
+    padding-right: $margin_medium;
+  }
+
+  @include small-max {
+    padding-left: $margin_small;
+    padding-right: $margin_small;
+  }
+  &--no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &--fluid {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+
+@function col-width($nb_col, $nb_gutter, $unit, $device) {
+  $full_width_px:0;
+  $full_width_vw:0;
+  @if($device == 'large'){
+    $col_width: math.div((($breakpoint_large - $margin_large*2) - (( $col_large - 1 ) * $gutter_large )) , $col_large);
+    $full_width_px: $col_width * $nb_col + $nb_gutter * $gutter_large;
+    $full_width_percent : calc(($full_width_px * 100) / ($breakpoint_large - $margin_large*2));
+    $full_width_vw : calc($full_width_percent * (100vw - $margin_large*2) / 100);
+  }@else if($device == 'medium'){
+    $col_width: math.div((($breakpoint_medium  - $margin_medium*2 )- (( $col_medium - 1) * $gutter_medium )) , $col_medium);
+    $full_width_px: $col_width * $nb_col + $nb_gutter * $gutter_medium;
+    $full_width_percent : calc(($full_width_px * 100) / ($breakpoint_medium - $margin_medium*2));
+    $full_width_vw : calc($full_width_percent * (100vw - $margin_medium*2) / 100);
+  }@else if($device == 'small'){
+    $col_width: math.div((($breakpoint_small - $margin_small*2) - (( $col_small - 1) * $gutter_small )) , $col_small);
+    $full_width_px: $col_width * $nb_col + $nb_gutter * $gutter_small;
+    $full_width_percent : calc(($full_width_px * 100) / ($breakpoint_small - $margin_small*2));
+    $full_width_vw : calc($full_width_percent * (100vw - $margin_small*2) / 100);
+  }
+  @if($unit == 'px'){
+    @return $full_width_px;
+  }@else{
+    @return $full_width_vw;
+  }
+}
+

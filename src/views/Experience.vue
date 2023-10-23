@@ -1,5 +1,5 @@
 <template>
-    <!-- <ExperienceIntro /> -->
+    <ExperienceIntro />
     <Modal :data="modalData"/>
     <div class="changeScene-btn flex align-center justify-center text--m" @click="changeScene()">
       <span>CHANGE DE VUE</span>
@@ -10,6 +10,7 @@
 <script setup>
 import Experience from "../Experience/Experience";
 import Modal from "/src/components/Modal.vue";
+import ExperienceIntro from "/src/components/ExperienceIntro.vue";
 import { onMounted, ref } from 'vue';
 import MittInstance from "../core/lib/MittInstance.js";
 import { ENV_DATA } from "../data/environmentData.js";

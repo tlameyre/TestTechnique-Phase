@@ -7,9 +7,23 @@
 </template>
 
 <script setup>
-  import CtaBtnVue from './CtaBtn.vue';
+  import { onMounted } from 'vue';
+import CtaBtnVue from './CtaBtn.vue';
   import DragSVG from './DragSVG.vue';
   import gsap from 'gsap';
+
+  onMounted(() => {
+     const element = document.getElementById('eemI4NGdv0x1');
+
+    const callback = function (event) {
+      if (!event.target.svgatorPlayer) {
+        return;
+      }
+      event.target.svgatorPlayer.play();
+    };
+
+    element.addEventListener('ready', callback);
+  })
 
   const handleClick = () => {
     gsap.to('.intro-experience__container', {
